@@ -2,8 +2,8 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-
-		<title>Flex Calculadora</title>
+		<title>Flex Calculator</title>
+		<link rel="stylesheet" type="text/css" href="Calc.css">
 
 		<script type="text/javascript">
 			
@@ -11,6 +11,42 @@
 	</head>
 
 	<body>
-	
+		<div class="header">
+			<h1>
+				CALCULATOR
+			</h1>
+		</div>
+
+		<hr>
+
+		<section class="calc-container">
+			<div class="calc-box-1">
+				<input type="number" placeholder="First number here">
+			</div>
+			
+			<select class="calc-box-2">
+				<option value="">--Select an operation</option>
+				<option value="1">Addition</option>
+				<option value="2">Subtraction</option>
+				<option value="3">Multiplication</option>
+				<option value="4">Division</option>
+			</select>
+			
+			<div class="calc-box-3">
+				<input type="number" placeholder="Second number here">
+			</div>
+
+			<hr>
+		</section>
+
+		<div class="calc-button">
+			<button type="button">Calcular</button>
+		</div>
+
+		<hr>
+
+		<div class="result">
+			Resultado:<br><input type="text" readonly>
+		</div>
 	</body>
 </html>
