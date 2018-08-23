@@ -12,16 +12,16 @@
 
 	<body>
 		<div class="header">
-			<h1>
+			<p>
 				CALCULATOR
-			</h1>
+			</p>
 		</div>
 
-		<hr>
+		
 
 		<section class="calc-container">
 			<div class="calc-box-1">
-				<input type="number" placeholder="First number here">
+				<input type="number" placeholder="Nº1">
 			</div>
 			
 			<select class="calc-box-2">
@@ -33,20 +33,20 @@
 			</select>
 			
 			<div class="calc-box-3">
-				<input type="number" placeholder="Second number here">
+				<input type="number" placeholder="Nº2">
 			</div>
 
-			<hr>
+			
 		</section>
 
-		<div class="calc-button">
-			<button type="button">Calcular</button>
+		<div class="button-container">
+			<button type="button" class="calc-button" cursor: pointer>Calculate</button>
 		</div>
 
-		<hr>
 
 		<div class="result">
-			Resultado:<br><input type="text" readonly>
+			Resultado:
+			<input type="text" readonly class="show">
 		</div>
 	</body>
 </html>
