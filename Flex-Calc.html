@@ -5,8 +5,47 @@
 		<title>Flex Calculator</title>
 		<link rel="stylesheet" type="text/css" href="Calc.css">
 		<link rel="stylesheet" type="text/css" href="../../normalize.css">
+		
 		<script type="text/javascript">
-			
+			function calculo(){
+				var num1 = document.getElementById("num1").value;
+				var num2 = document.getElementById("num2").value;
+				var operador = document.getElementById("operador").value;
+				
+
+				num1 = parseFloat(num1);
+				num2 = parseFloat(num2);
+
+				if (num1 == "" || num1 == null) {
+					alert("Type a valid number1");
+					return false;
+				}
+				if (num2 == "" || num2 = null){
+					alert("Type a valid number2");
+					return false;
+				}
+				
+				var resultado = null;
+
+				switch(operador){
+					case '1':
+						resultado = num1 + num2;
+						break;
+					case '2':
+						resultado = num1 - num2;
+						break;
+					case '3':
+						resultado = num1 * num2;
+						break;
+					case '4':
+						resultado = num1 / num2;
+						break;
+					default:
+						alert("Select a valid operation");
+						return false;
+				}
+				document.getElementById('resultado').value = resultado;
+			}
 		</script>
 	</head>
 
@@ -17,14 +56,13 @@
 			</p>
 		</div>
 
-		
-
 		<section class="calc-container">
 			<div class="calc-box-1">
-				<input type="number" placeholder="Nº1">
+				<input id="num1" type="text" placeholder="Nº1">
 			</div>
 			
-			<select class="calc-box-2">
+
+			<select id="operador" class="calc-box-2">
 				<option value="">--Select an operation</option>
 				<option value="1">&nbsp;&nbsp;Addition</option>
 				<option value="2">&nbsp;&nbsp;Subtraction</option>
@@ -33,20 +71,18 @@
 			</select>
 			
 			<div class="calc-box-3">
-				<input type="number" placeholder="Nº2">
+				<input id="num2" type="text" placeholder="Nº2">
 			</div>
-
-			
 		</section>
 
 		<div class="button-container">
-			<button type="button" class="calc-button">Calculate</button>
+			<button type="button" class="calc-button" onclick="calculo()">Calculate</button>
 		</div>
 
 
 		<div class="result">
 			Resultado:
-			<input type="text" readonly class="show">
+			<input id="resultado" type="text"  class="show" readonly>
 		</div>
 	</body>
 </html>
