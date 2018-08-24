@@ -7,44 +7,54 @@
 		<link rel="stylesheet" type="text/css" href="../../normalize.css">
 		
 		<script type="text/javascript">
-			function calculo(){
-				var num1 = document.getElementById("num1").value;
-				var num2 = document.getElementById("num2").value;
-				var operador = document.getElementById("operador").value;
+			function calcular(){
+				var operacao = document.getElementById('operacao').value;
 				
-
+				var num1 = document.getElementById('num1').value;
+				
+				var num2 = document.getElementById('num2').value;
+				
+				//forçando o tipo de variável
 				num1 = parseFloat(num1);
 				num2 = parseFloat(num2);
-
-				if (num1 == "" || num1 == null) {
-					alert("Type a valid number1");
+				
+				if(num1 == '' || num1 == null){
+					alert('Favor digitar um número válido para operação (num1)');
 					return false;
 				}
-				if (num2 == "" || num2 = null){
-					alert("Type a valid number2");
+				
+				if(num2 == '' || num2 == null){
+					alert('Favor digitar um número válido para operação (num2)');
 					return false;
 				}
 				
 				var resultado = null;
-
-				switch(operador){
-					case '1':
-						resultado = num1 + num2;
-						break;
-					case '2':
+				
+				switch(operacao){
+				
+					case '1': //subtracao
 						resultado = num1 - num2;
 						break;
-					case '3':
+					
+					case '2': //adição
+						resultado = num1 + num2;
+						break;
+					
+					case '3': //multiplicação
 						resultado = num1 * num2;
 						break;
-					case '4':
+					
+					case '4': //divisão
 						resultado = num1 / num2;
 						break;
+					
 					default:
-						alert("Select a valid operation");
+						alert('A opção selecionada é inválida');
 						return false;
 				}
+				
 				document.getElementById('resultado').value = resultado;
+				
 			}
 		</script>
 	</head>
@@ -62,12 +72,12 @@
 			</div>
 			
 
-			<select id="operador" class="calc-box-2">
+			<select id="operacao" class="calc-box-2">
 				<option value="">--Select an operation</option>
-				<option value="1">&nbsp;&nbsp;Addition</option>
-				<option value="2">&nbsp;&nbsp;Subtraction</option>
-				<option value="3">&nbsp;&nbsp;Multiplication</option>
-				<option value="4">&nbsp;&nbsp;Division</option>
+				<option value="1">Subtraction</option>
+				<option value="2">Addition</option>
+				<option value="3">Multiplication</option>
+				<option value="4">Division</option>
 			</select>
 			
 			<div class="calc-box-3">
@@ -76,7 +86,7 @@
 		</section>
 
 		<div class="button-container">
-			<button type="button" class="calc-button" onclick="calculo()">Calculate</button>
+			<button type="button" class="calc-button" onclick="calcular()">Calculate</button>
 		</div>
 
 
