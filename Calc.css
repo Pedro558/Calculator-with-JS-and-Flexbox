@@ -7,12 +7,11 @@
 	font-family: Arial, Helvetica, sans-serif;
 	box-sizing: border-box;
 }
+
 .header{
 	margin-top: 0;
 	background-color: #F0F0F0;
-	font-size: 60px;
-	display: flex;
-	padding: 20px 0 0 60px;
+	justify-content: center;
 }
 
 /*NUMBERS*/
@@ -57,4 +56,20 @@ input{
 }
 .show{
 	background-color: #D4D4D4;
+}
+
+/*MEDIA SCREEN*/
+@media screen and (max-width: 700px){
+	.header, .calc-container, .calc-box-1, .calc-box-2, .calc-box-3,
+	.button-container, .calc-button,
+	.result, .show{
+	width: 100%;
+}
+	.calc-container{
+		flex-direction: column;
+	}
+	.calc-box-1, .calc-box-2, .calc-box-3{
+	width: 97%;
+	height: 40px;
+}
 }
