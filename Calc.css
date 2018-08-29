@@ -62,7 +62,7 @@ input{
 @media screen and (max-width: 700px){
 	.header, .calc-container, .calc-box-1, .calc-box-2, .calc-box-3,
 	.button-container, .calc-button,
-	.result, .show{
+	.result{
 	width: 100%;
 }
 	.calc-container{
